@@ -1,0 +1,50 @@
+Sales Analysis – Explanation Document
+
+
+1. Revenue Overview
+Total revenue of the company: Calculated using SUM(total_sales).
+Revenue distribution by category: Aggregated SUM(total_sales) grouped by category.
+Top category contributor: Determined by ordering total revenue descending and selecting the top category.
+These queries provide insight into which products drive revenue and the overall sales scale.
+
+
+2. Typical Transaction Value
+Average transaction value: AVG(quantity * price) gives a general sense of transaction size.
+Median transaction value: PERCENTILE_CONT(0.5) provides a robust measure, especially for right-skewed data (avg > median).
+Median is preferred for skewed distributions to better reflect typical transactions.
+
+
+3. NULL Impact Assessment
+NULL discounts: Counted with WHERE discount IS NULL.
+Average discount calculation methods:
+Default average
+Zero imputation (COALESCE(discount, 0))
+Average imputation (COALESCE(discount, AVG(discount)))
+Median imputation (COALESCE(discount, PERCENTILE_CONT(0.5)))
+In this dataset, no NULLs exist, so method choice doesn’t affect results.
+
+Notes:
+Zero imputation is a business decision.
+Average imputation preserves the mean and reduces variance.
+Median imputation is robust to outliers.
+
+
+4. Revenue Distribution Analysis
+Revenue ranges: Transactions grouped into 50-unit bins using CEILING(total_sales/50)*50.
+Metrics per range: Count of transactions (COUNT(*)) and total revenue (SUM(total_sales)) calculated for each range.
+Dominant revenue range: Identified by total revenue descending within grouped ranges.
+Helps visualize revenue concentration and identify typical transaction ranges.
+
+
+5. Data Quality Check
+Duplicate transaction IDs: Checked using GROUP BY transaction_id HAVING COUNT(*) > 1.
+Employee salary aggregation risk: Aggregating employee_salary may be misleading due to duplicates in the table.
+Ensures that KPI calculations are reliable and highlights potential pitfalls when summing salary data directly.
+
+
+✅ Summary
+Revenue insights: Total and category-level contribution.
+Transaction value insights: Median better represents typical transactions for skewed data.
+NULL handling: Verified impact on discounts; confirmed dataset completeness.
+Revenue distribution: Understanding of dominant transaction ranges.
+Data quality: Identified potential risks with duplicates for accurate KPIs.
