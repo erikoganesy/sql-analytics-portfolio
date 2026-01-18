@@ -1,4 +1,4 @@
-# sql-analytics-portfolio
+# SQL Analytics Portfolio
 
 This repository contains my **SQL analytics practice project**.  
 It is created to improve my skills in **SQL, data analysis, and database design**, using realistic datasets and analytical tasks.
@@ -9,10 +9,10 @@ The project shows how raw data can be organized into schemas and analyzed using 
 
 ## 🎯 Project Purpose
 
-- Practice **SQL queries for data analysis**
-- Learn **database schema design**
-- Work with **realistic business datasets**
-- Improve analytical thinking for **junior data analyst / data scientist roles**
+- Practice SQL queries for data analysis
+- Learn database schema design
+- Work with realistic business datasets
+- Improve analytical thinking for junior data analyst / data scientist roles
 
 ---
 
@@ -48,6 +48,8 @@ sql-analytics-portfolio/
 │   └── sql_session5.sql
 │
 └── README.md
+```
+ ---
 
 ## 🧩 Schemas Overview
 
@@ -121,4 +123,12 @@ Using SQL, I analyze:
 ## 👤 Author
 
 **Erik Hovhannisyan**  
-Machine Learning Sc
+Machine Learning Scientist | Learning SQL Analytics  
+
+GitHub: https://github.com/erikoganesy
+
+---
+
+## 📄 Notes
+
+This project is created for learning and portfolio purposes.
