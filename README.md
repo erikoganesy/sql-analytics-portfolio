@@ -49,10 +49,9 @@ sql-analytics-portfolio/
 │
 └── README.md
 
----
-
 ## 🧩 Schemas Overview
-# Public Schema
+
+### Public Schema
 
 Contains raw data, similar to data from operational systems:
 
@@ -63,3 +62,63 @@ Contains raw data, similar to data from operational systems:
 - Sales
 
 This schema is used as a starting point for analysis.
+
+---
+
+### Analytics Schema
+
+Created for analysis and reporting:
+
+- Customer and order data prepared for analytics
+- Geographic hierarchy (countries → regions → cities)
+- Order items for detailed sales analysis
+
+This schema makes analytical queries easier to write and understand.
+
+---
+
+## 📊 What I Practice in This Project
+
+Using SQL, I analyze:
+
+- Total and average revenue
+- Sales by product and category
+- Customer distribution by location
+- Order counts and sales trends
+- Simple performance classification
+- Correct handling of missing values
+
+---
+
+## 🛠 Tools & Technologies
+
+- SQL (PostgreSQL-style)
+- CSV files
+- pgAdmin
+- VS Code
+- Git & GitHub
+
+---
+
+## 👥 Who This Project Is For
+
+- Junior Data Analyst roles
+- Entry-level Data Scientist roles
+- SQL interview preparation
+- Anyone learning SQL analytics
+
+---
+
+## ▶ How to Use
+
+1. Create a PostgreSQL database
+2. Load CSV files into the correct schemas
+3. Run SQL scripts from the `queries` folder
+4. Explore and modify queries to practice
+
+---
+
+## 👤 Author
+
+**Erik Hovhannisyan**  
+Machine Learning Sc
