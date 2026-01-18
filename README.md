@@ -48,3 +48,18 @@ sql-analytics-portfolio/
 │   └── sql_session5.sql
 │
 └── README.md
+
+---
+
+## 🧩 Schemas Overview
+# Public Schema
+
+Contains raw data, similar to data from operational systems:
+
+- Customers
+- Employees
+- Orders
+- Products
+- Sales
+
+This schema is used as a starting point for analysis.
